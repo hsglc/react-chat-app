@@ -5,19 +5,13 @@ import { useHistory } from "react-router-dom";
 import { ChatEngine } from "react-chat-engine";
 
 import { useAuth } from "../store/AuthContext";
-
-import { auth } from "../firebase";
+import Nav from './Nav/Nav';
 
 export default function Chats() {
   const didMountRef = useRef(false);
   const [loading, setLoading] = useState(true);
   const { user } = useAuth();
   const history = useHistory();
-
-  async function handleLogout() {
-    await auth.signOut();
-    history.push("/");
-  }
 
   async function getFile(url) {
     let response = await fetch(url);
@@ -34,7 +28,6 @@ export default function Chats() {
         return;
       }
 
-      
       axios
         .get("https://api.chatengine.io/users/me/", {
           headers: {
@@ -65,7 +58,6 @@ export default function Chats() {
               .catch((e) => console.log("e", e.response));
           });
         });
-      
     }
   }, [user, history]);
 
@@ -73,13 +65,7 @@ export default function Chats() {
 
   return (
     <div className="chats-page">
-      <div className="nav-bar">
-        <div className="logo-tab">React Chat</div>
-
-        <div onClick={handleLogout} className="logout-tab">
-          Logout
-        </div>
-      </div>
+      <Nav />
 
       <ChatEngine
         height="calc(100vh - 66px)"
