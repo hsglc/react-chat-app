@@ -8,6 +8,10 @@
 
 It's a basic real-time reactjs chat application.
 
+## Screenshots
+
+![](https://s6.gifyu.com/images/Animation94b8a24c5a0448d7.gif)
+
 
 ## Installation 
 
