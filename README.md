@@ -1,7 +1,7 @@
 
 ## Demo
 
-[Live](react-chat-app-f17b81k1z-hsglc.vercel.app)
+[Live](https://react-chat-app-71qubfnqu-hsglc.vercel.app/)
 
   
 # React Chat App
