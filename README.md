@@ -1,7 +1,7 @@
 
 ## Demo
 
-[Live](https://netlify-react-chat-app-hg.netlify.app)
+[Live](react-chat-app-git-main-hsglc.vercel.app)
 
   
 # React Chat App
